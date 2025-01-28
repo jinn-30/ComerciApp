@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="fondo" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.inventory_windowController">
+   <children>
+      <BorderPane prefHeight="674.0" prefWidth="920.0">
+         <top>
+            <Label alignment="CENTER" prefHeight="72.0" prefWidth="920.0" text="INVENTARIO DE PRODUCTOS" textFill="#2a6548" BorderPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="Serif Bold" size="30.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" top="5.0" />
+               </padding>
+            </Label>
+         </top>
+         <bottom>
+            <Pane prefHeight="155.0" prefWidth="910.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="add_btn" layoutX="40.0" layoutY="53.0" mnemonicParsing="false" onAction="#registerProductWindow" prefHeight="37.0" prefWidth="183.0" styleClass="button-window" text="Agregar producto">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="251.0" layoutY="53.0" mnemonicParsing="false" onAction="#modifyWindow" prefWidth="183.0" styleClass="button-window" text="Modificar producto">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="469.0" layoutY="53.0" mnemonicParsing="false" onAction="#eliminateWindow" prefWidth="183.0" styleClass="button-window" text="Eliminar producto">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="684.0" layoutY="23.0" mnemonicParsing="false" onAction="#trademarkWindow" prefWidth="183.0" styleClass="button-window" text="Marcas">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/etiqueta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="684.0" layoutY="83.0" mnemonicParsing="false" onAction="#categoryWindow" prefHeight="47.0" prefWidth="183.0" styleClass="button-window" text="Categorías" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </BorderPane.margin>
+            </Pane>
+         </bottom>
+         <center>
+            <GridPane prefHeight="446.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="375.0" minHeight="10.0" prefHeight="371.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="427.0" style="-fx-background-color: #4D9D76;">
+                     <children>
+                        <Label layoutX="275.0" layoutY="35.0" text="Buscar:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="search_field" layoutX="346.0" layoutY="32.0" prefHeight="31.0" prefWidth="266.0" />
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="616.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="324.0" prefWidth="920.0" GridPane.rowIndex="1">
+                     <children>
+                        <TableView fx:id="table_products" layoutX="100.0" layoutY="4.0" prefHeight="337.0" prefWidth="720.0" style="-fx-border-color: black;">
+                          <columns>
+                            <TableColumn fx:id="codeColumn" prefWidth="116.0" text="Codigo" />
+                            <TableColumn fx:id="nameColumn" prefWidth="122.0" text="Nombre" />
+                              <TableColumn fx:id="grossColumn" prefWidth="112.0" text="Precio bruto" />
+                              <TableColumn fx:id="netColumn" prefWidth="125.0" text="Precio neto" />
+                              <TableColumn fx:id="lotColumn" prefWidth="113.0" text="Cantidad" />
+                              <TableColumn fx:id="trademarkColumn" prefWidth="149.0" text="Marca" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+      <Pane layoutY="167.0" prefHeight="347.0" prefWidth="100.0" styleClass="dec1" AnchorPane.leftAnchor="0.0" />
+      <Pane layoutX="820.0" layoutY="167.0" prefHeight="347.0" prefWidth="100.0" styleClass="dec1" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

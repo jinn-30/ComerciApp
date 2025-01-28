@@ -1,0 +1,97 @@
+/*Estilos para la vantana login*/
+ 
+.textfield{
+    -fx-border-color: #4D9D76;
+    -fx-border-width: 3px; 
+}
+
+/*Estilos para la ventana principal-ventas*/
+
+.button-menu{
+    -fx-background-color: #3C9069;
+    -fx-background-radius: 0em;
+}
+.button-menu:hover{
+    -fx-background-color: #8CCFAF;
+}
+.button-menu:pressed{
+    -fx-background-color: #52B786;
+}
+.button-menu:focused{
+    -fx-background-color: #52B786;
+    -fx-border-width: 0px 0px 0px 3px; 
+}
+.subtitle{
+    -fx-background-color:  linear-gradient(to right, #F7F7F2 32%, #4D9D76 75%);
+}
+.cambio{
+    -fx-background-color: linear-gradient(to top, #F7F7F2 32%, #4D9D76 75%);
+}
+.button-window{
+    -fx-background-color: #F7F7F2;
+    -fx-border-color: #3C9069;
+    -fx-border-width: 3px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-background-radius: 0em;
+}
+.fondo{
+    -fx-background-color: #F7F7F2;
+}
+.button-window:hover{
+    -fx-background-color: #3C9069;
+    -fx-text-fill: #FFFFFF;
+}
+.banner2{
+    -fx-background-color: linear-gradient(from 0% 50% to 100% 50%, #8ccfaf 0%, #2a6548 100%);
+}
+.button-gen{
+    -fx-background-color: #F7F7F2;
+    -fx-border-color: #3C9069;
+    -fx-border-width: 3px;
+    -fx-cursor: hand;
+    -fx-background-radius: 0em;
+}
+.button-gen:hover{
+    -fx-background-color: #3C9069;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button-turno{
+    -fx-background-color: #F7F7F2;
+    -fx-border-width: 3px;
+    -fx-border-color: #FF5454;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+.button-turno:hover{
+    -fx-background-color: #FF5454;
+    -fx-text-fill: #FFFFFF;
+}
+.dec1{
+    -fx-background-color:  #4D9D76;
+    -fx-border-color: #F7F7F2;
+    -fx-border-width: 5px;
+}
+.banner{
+    -fx-background-color: #2a6548;
+}
+
+.exit{
+    -fx-background-color: #FF5454;
+    -fx-border-color: #FF5454;
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-padding: 0 0 0 0;
+}
+.exit:hover{
+    -fx-background-color: #fe0000;
+    
+}
+
+.panel1{
+    -fx-background-color: #3C9069;
+}
+
+
+

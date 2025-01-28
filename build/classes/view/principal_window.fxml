@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="743.0" prefWidth="1100.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principal_windowController">
+   <children>
+      <BorderPane layoutX="178.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="472.0" prefWidth="180.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="sales_button" mnemonicParsing="false" onMouseClicked="#salesWindows" prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" text="Ventas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="inventory_button" mnemonicParsing="false" onMouseClicked="#inventoryWindows" prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" text="Inventario" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="record_button" mnemonicParsing="false" onMouseClicked="#recordWindows" prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" text="Historial" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" text="Personal" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" text="Reportes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" />
+                  <Label prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" />
+                  <Label prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" />
+                  <Label prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" />
+                  <Label prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" />
+                  <Label prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" />
+                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="180.0" styleClass="button-menu" stylesheets="@../css/styling.css" text="Acerca de" textFill="WHITE" />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <Pane prefHeight="70.0" style="-fx-background-color: #2A6548;">
+               <children>
+                  <Label fx:id="date_label" layoutX="877.0" layoutY="19.0" prefHeight="30.0" prefWidth="200.0" style="-fx-border-color: #3C9069;" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <AnchorPane fx:id="rootContenedor" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

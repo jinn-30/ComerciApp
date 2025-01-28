@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" style="-fx-border-color: black;" styleClass="fondo" stylesheets="@../../css/styling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modal_controller.registerProduct_windowController">
+   <children>
+      <BorderPane layoutX="265.0" layoutY="156.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="72.0" prefWidth="700.0" styleClass="banner" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="213.0" layoutY="25.0" text="NUEVO PRODUCTO" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="exit_btn" alignment="CENTER" layoutX="653.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#closeWindow" prefHeight="34.0" prefWidth="34.0" styleClass="exit" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="139.0" layoutY="42.0" text="Codigo:" />
+                  <TextField fx:id="code_text" layoutX="217.0" layoutY="38.0" prefHeight="31.0" prefWidth="188.0" />
+                  <Button layoutX="418.0" layoutY="34.0" mnemonicParsing="false" onAction="#codeRandom" styleClass="button-gen" text="Generar" />
+                  <Label layoutX="42.0" layoutY="83.0" text="Nombre del producto:" />
+                  <TextField fx:id="name_text" layoutX="217.0" layoutY="80.0" prefHeight="31.0" prefWidth="283.0" />
+                  <Label layoutX="142.0" layoutY="128.0" text="Marca:" />
+                  <ComboBox fx:id="trademark_cbox" layoutX="217.0" layoutY="123.0" prefHeight="31.0" prefWidth="282.0" />
+                  <Label layoutX="122.0" layoutY="172.0" text="Categoria:" />
+                  <ComboBox fx:id="category_cbox" layoutX="217.0" layoutY="167.0" prefHeight="31.0" prefWidth="282.0" />
+                  <Label layoutX="105.0" layoutY="215.0" text="Precio bruto:" />
+                  <TextField fx:id="gross_text" layoutX="217.0" layoutY="210.0" prefHeight="31.0" prefWidth="150.0" />
+                  <Label layoutX="109.0" layoutY="258.0" text="Precio neto:" />
+                  <TextField fx:id="net_text" layoutX="217.0" layoutY="253.0" prefHeight="31.0" prefWidth="150.0" />
+                  <Label layoutX="373.0" layoutY="215.0" prefHeight="21.0" prefWidth="169.0" text="Impuesto:                 %" />
+                  <TextField fx:id="tax_text" layoutX="445.0" layoutY="210.0" prefWidth="50.0" text="20" />
+                  <Label layoutX="86.0" layoutY="300.0" text="Cantidad o lote:" />
+                  <TextField fx:id="lot_text" layoutX="217.0" layoutY="295.0" prefHeight="31.0" prefWidth="150.0" />
+                  <Button layoutX="160.0" layoutY="353.0" mnemonicParsing="false" onAction="#addButtonAction" prefWidth="300.0" styleClass="button-window" text="Guardar" />
+               </children></Pane>
+         </center>
+         <left>
+            <Pane prefHeight="428.0" prefWidth="40.0" styleClass="dec1" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="200.0" prefWidth="40.0" styleClass="dec1" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

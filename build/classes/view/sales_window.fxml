@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="674.0" prefWidth="920.0" style="-fx-background-color: #F7F7F2;" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.sales_windowController">
+   <children>
+      <BorderPane prefHeight="674.0" prefWidth="920.0">
+         <bottom>
+            <Pane prefHeight="80.0" prefWidth="721.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="turno_label" layoutX="21.0" layoutY="25.0" text="Cajero en turno:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="159.0" layoutY="30.0" prefHeight="21.0" prefWidth="195.0" textFill="#2b00ff">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="790.0" layoutY="15.0" mnemonicParsing="false" prefHeight="31.0" styleClass="button-turno" text="Cerrar turno" />
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <GridPane prefHeight="547.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="66.0" prefWidth="721.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="26.0" text="Codigo de barras:" />
+                        <TextField fx:id="code_text" layoutX="138.0" layoutY="21.0" prefHeight="30.0" />
+                        <Label layoutX="342.0" layoutY="26.0" text="Cantidad:" />
+                        <Button layoutX="798.0" layoutY="17.0" mnemonicParsing="false" onAction="#addSearchProduct" prefHeight="31.0" prefWidth="90.0" styleClass="button-gen" text="Agregar" />
+                        <TextField fx:id="quantity_text" layoutX="412.0" layoutY="21.0" prefHeight="30.0" prefWidth="97.0" text="1" />
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="923.0" style="-fx-background-color: #2A6548;" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="tableSales" prefHeight="294.0" prefWidth="920.0" GridPane.rowIndex="2">
+                     <columns>
+                        <TableColumn fx:id="codeColumn" prefWidth="171.0" text="Codigo" />
+                        <TableColumn fx:id="nameColumn" minWidth="3.0" prefWidth="245.0" text="Nombre" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="136.0" text="Cantidad" />
+                        <TableColumn fx:id="priceColumn" prefWidth="194.0" text="Precio" />
+                        <TableColumn fx:id="stockColumn" prefWidth="173.0" text="Stock" />
+                     </columns>
+                  </TableView>
+                  <Pane prefHeight="120.0" prefWidth="920.0" GridPane.rowIndex="3">
+                     <children>
+                        <Button layoutX="27.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" styleClass="button-gen" text="Cancelar venta" />
+                        <Button layoutX="27.0" layoutY="53.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" styleClass="button-gen" text="Eliminar producto" />
+                        <Label fx:id="price_label" layoutX="641.0" layoutY="1.0" prefHeight="100.0" prefWidth="279.0" style="-fx-background-color: #aedae3;" text="\$">
+                           <font>
+                              <Font size="58.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="540.0" layoutY="99.0" smooth="false" startX="-540.0" stroke="#2a6548" strokeWidth="3.0" />
+                        <Button layoutX="521.0" layoutY="22.0" mnemonicParsing="false" onAction="#saleProcessWindow" prefHeight="55.0" styleClass="button-window" text="F12-Cobrar" />
+                     </children>
+                  </Pane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="145.0" minHeight="0.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="317.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="472.0" minHeight="10.0" prefHeight="342.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="376.0" minHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </center>
+         <top>
+            <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="922.0" styleClass="subtitle" text="VENTA DE PRODUCTOS" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" top="5.0" />
+               </padding>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</Pane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="674.0" prefWidth="920.0" styleClass="fondo" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.record_windowController">
+   <children>
+      <BorderPane layoutX="321.0" layoutY="222.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="72.0" prefWidth="920.0" styleClass="panel1" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="267.0" layoutY="17.0" text="HISTORIAL DE VENTAS" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="35.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </top>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="60.0" styleClass="dec1" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="200.0" prefWidth="60.0" styleClass="dec1" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #2a6548;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </BorderPane.margin>
+               <children>
+                  <TableView layoutX="35.0" layoutY="35.0" prefHeight="501.0" prefWidth="424.0">
+                    <columns>
+                      <TableColumn prefWidth="115.0" text="Codigo" />
+                      <TableColumn prefWidth="113.0" text="Nombre" />
+                        <TableColumn prefWidth="110.0" text="Precio venta" />
+                        <TableColumn prefWidth="85.0" text="Cantidad" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
